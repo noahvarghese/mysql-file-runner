@@ -57,7 +57,13 @@ def parse_args():
             sys.exit()
 
     if len(files) < 1:
-        print("Please ")
+        print("Please  specify file(s) or directories to execute")
+
+
+    print(db_env)
+    if env == None or env == "" or files.length == 0:
+        print(help_menu)
+        sys.exit()
 
     return env
 
