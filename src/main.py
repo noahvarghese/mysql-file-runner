@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 # Command Examples
 # If there is a specific order you need the files executed in, use a csv string of paths
