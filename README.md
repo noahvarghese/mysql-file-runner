@@ -14,3 +14,15 @@ If passed a directory it runs it alphabetically.
 - DB_URL: the url of the database to access
 - DB_USER: the database user to connect as
 - DB_PWD: the password for the database user account
+
+## Help
+
+- Exactly one environment must be specified\n\n
+- prod\t--prod/-p\tSelects the production environment\n
+- dev\t--dev/-d\tSelects the development environment\n
+- test\t--test/-t\tSelects the QA environment\n\n
+- path\t--path\t\tSets the .env file path [optional]\n
+  - Environment variables required:\n
+    - DB_NAME, DB_URL, DB_USER, DB_PWD\n\n
+- files\t--files/-f\tcomma seperated list of sql files, or directories to run, they will be run in order\n\n
+- help\t--help/-h\tPrints this menu\n
