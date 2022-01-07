@@ -26,6 +26,8 @@ help_menu = ("Exactly one environment must be specified\n\n" +
              "dev\t--dev/-d\tSelects the development environment\n" +
              "test\t--test/-t\tSelects the QA environment\n\n" +
              "path\t--path\t\tSets the .env file path [optional]\n" +
+             "\tEnvironment variables required:\n" + 
+             "\t\t DB_NAME, DB_URL, DB_USER, DB_PWD\n\n" +
              "files\t--files/-f\tcomma seperated list of sql files, or directories to run, they will be run in order\n\n"
              "help\t--help/-h\tPrints this menu\n")
 
