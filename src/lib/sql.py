@@ -88,13 +88,13 @@ def get_executor(db: mysql.connector.MySQLConnection) -> Callable[[str], None]:
 
 def execute(db, sql) -> None:
     print(f'[ INFO ]: Executing on {os.getenv("DB_NAME")}')
-    for i, statment in enumerate(sql):
+    for i, statement in enumerate(sql):
         print_progress_bar(i + 1, len(sql), prefix='Progress:',
                            suffix='Complete', length=50)
 
         cursor = db.cursor()
         try:
-            cursor.execute(statment)
+            cursor.execute(statement)
             db.commit()
         except Exception as e:
             cursor.close()
