@@ -5,7 +5,7 @@ fi
 
 pip uninstall -r ./requirements.txt
 
-sudo rm /usr/local/bin/sql-runner
-sudo rm -rf /usr/local/lib/sql-runner
+sudo rm /usr/local/bin/mysql-file-runner
+sudo rm -rf /usr/local/lib/mysql-file-runner
 
-echo "Command sql-runner succesfully uninstalled"
+echo "Command mysql-file-runner succesfully uninstalled"

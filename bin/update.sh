@@ -7,8 +7,8 @@ fi
 
 pip install -r ./requirements.txt 0 > /dev/null 2>&1
 
-sudo rm -rf /usr/local/lib/sql-runner/
+sudo rm -rf /usr/local/lib/mysql-file-runner/
 
-sudo cp -R ./src /usr/local/lib/sql-runner
+sudo cp -R ./src /usr/local/lib/mysql-file-runner
 
-echo "sql-runner updated"
+echo "mysql-file-runner updated"
