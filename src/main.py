@@ -61,7 +61,7 @@ def parse_args() -> List[str]:
     if env == None or len(files) == 0:
         sys.exit(help_menu)
     else:
-        db_name = os.getenv("DB")
+        db_name = os.getenv("DB_NAME")
 
         if not (env is None):
             if len(env) > 0:
@@ -72,18 +72,14 @@ def parse_args() -> List[str]:
 
     return files
 
+def format_file(data):
+    # Remove comments from the string
+    comment_regex = r"/\/*.*?\*\/"
+    data = re.sub(comment_regex, '', data)
+
+    return data
 
 def main():
-
-    def format_file(data):
-        data = data.replace("${DATABASE}", os.getenv("DB_NAME"))
-        data = data.replace("\n", " ")
-
-        # Remove comments from the string
-        comment_regex = r"/\/*.*?\*\/"
-        data = re.sub(comment_regex, '', data)
-
-        return data
 
     hide_cursor()
     file_list = parse_args()
